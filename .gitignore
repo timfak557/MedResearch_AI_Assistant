@@ -1,0 +1,39 @@
+# Secrets — never commit
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data — raw dataset and generated artifacts are reproducible
+data/raw/*
+data/processed/*
+data/evaluation/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/evaluation/.gitkeep
+
+# Models / caches
+.cache/
+*.onnx
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Docker
+qdrant_storage/

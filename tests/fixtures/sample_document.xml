@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document id="0000042" source="TestSource" url="https://example.org/asthma">
+<Focus>Asthma</Focus>
+<QAPairs>
+	<QAPair pid="1">
+		<Question qid="0000042-1" qtype="information">What is (are) Asthma ?</Question>
+		<Answer>Asthma is a chronic lung disease that inflames and narrows the airways. Common symptoms include wheezing, chest tightness, shortness of breath, and coughing. The coughing often occurs at night or early in the morning.</Answer>
+	</QAPair>
+	<QAPair pid="2">
+		<Question qid="0000042-2" qtype="treatment">What are the treatments for Asthma ?</Question>
+		<Answer>Asthma is a long-term disease that has no cure. The goal of asthma treatment is to control the disease. Good asthma control will prevent chronic symptoms, reduce the need of quick-relief medicines, help maintain good lung function, let you maintain a normal activity level, and prevent asthma attacks.</Answer>
+	</QAPair>
+	<QAPair pid="3">
+		<Question qid="0000042-3" qtype="symptoms"></Question>
+		<Answer></Answer>
+	</QAPair>
+</QAPairs>
+</Document>

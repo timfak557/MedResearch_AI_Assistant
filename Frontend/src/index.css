@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 12%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 217 12% 44%;
+    --border: 214 20% 88%;
+    --input: 214 20% 84%;
+    --primary: 174 62% 30%;
+    --primary-foreground: 0 0% 100%;
+    --accent: 174 55% 94%;
+    --accent-foreground: 174 62% 22%;
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 85% 42%;
+    --success: 152 55% 34%;
+  }
+
+  .dark {
+    --background: 222 28% 9%;
+    --foreground: 213 25% 92%;
+    --card: 222 26% 12%;
+    --card-foreground: 213 25% 92%;
+    --muted: 220 22% 16%;
+    --muted-foreground: 216 12% 62%;
+    --border: 220 18% 22%;
+    --input: 220 18% 26%;
+    --primary: 174 55% 42%;
+    --primary-foreground: 180 40% 8%;
+    --accent: 174 40% 16%;
+    --accent-foreground: 174 55% 70%;
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --warning: 38 85% 58%;
+    --success: 152 50% 48%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Markdown content inside chat answers */
+  .prose-answer {
+    @apply text-[15px] leading-7;
+  }
+  .prose-answer h1,
+  .prose-answer h2,
+  .prose-answer h3 {
+    @apply font-semibold mt-4 mb-2 text-foreground;
+  }
+  .prose-answer h1 { @apply text-lg; }
+  .prose-answer h2 { @apply text-base; }
+  .prose-answer h3 { @apply text-[15px]; }
+  .prose-answer p { @apply my-2; }
+  .prose-answer ul { @apply list-disc pl-5 my-2 space-y-1; }
+  .prose-answer ol { @apply list-decimal pl-5 my-2 space-y-1; }
+  .prose-answer strong { @apply font-semibold; }
+  .prose-answer table { @apply w-full text-sm border-collapse my-3; }
+  .prose-answer th { @apply border border-border bg-muted px-2 py-1 text-left font-medium; }
+  .prose-answer td { @apply border border-border px-2 py-1 align-top; }
+  .prose-answer code { @apply font-mono text-[13px] bg-muted px-1 py-0.5 rounded; }
+  .prose-answer a { @apply text-primary underline underline-offset-2; }
+}
